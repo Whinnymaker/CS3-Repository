@@ -20,6 +20,7 @@ class Publication:
         print(f'Author: {self.__author}')
 
 class Book(Publication):
+    number_pages = " "
     def __init__(title, author, number_pages):
         self.__title = title
         self.__author = author
@@ -30,13 +31,14 @@ class Book(Publication):
 
     def set_number_of_pages(self, title):
         if number_pages <= 0:
-            print("The number of pages must be positive.")
+            print("You must enter a positive number.")
     def display_info(self):
         super().display_info()
         print(f"Number of pages: {self.get_number_of_pages()}")
         
 
 class Magazine(Publication):
+    issue_number = " "
     def __init__(self, title, author, issue_number):
         self.title = title
         self.author = author
@@ -47,7 +49,7 @@ class Magazine(Publication):
         
     def set_issue_number(self, issue_number):
         if issue_number <= 0:
-            print("The number of pages must be positive.")
+            print("You must enter a positive number.")
             
     def display_info(self):
         super().display_info()
